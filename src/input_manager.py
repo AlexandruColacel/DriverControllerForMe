@@ -3,7 +3,7 @@ Aqui tendremos toda la logica para manejar las entradas de los dispositivos
 
 """
 from inputs import get_gamepad
-class gamepadManger:
+class GamepadManger:
         def __init__(self):
                 #creamos un diccionario llamado estdo actual donde guardo los primeros botonoes a detectar 
              self.estado_actual = {
