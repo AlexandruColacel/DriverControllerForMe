@@ -1,13 +1,15 @@
 from inputs import GamePad
-from src.input_manager import GamepadManger
+from src.input_manager import GamepadManager
 import pydirectinput
 import time
+ZONA_ACCION = 10000 
+ZONA_MUERTA = 5000
 def main():
     pydirectinput.FAILSAFE = True
     pydirectinput.PAUSE = 0
     
     try:
-        mando = GamepadManger()
+        mando = GamepadManager()
     except Exception as e:
         print("Error: Conecta el mando.")
         return
@@ -21,8 +23,7 @@ def main():
     a_press = False
     d_press = False
    
-    ZONA_ACCION = 10000 
-    ZONA_MUERTA = 5000
+ 
 
     while True:
         mando.polling()
