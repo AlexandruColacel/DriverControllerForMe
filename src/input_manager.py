@@ -38,7 +38,7 @@ class GamepadManager:
                         else:
                             self.estado_actual[event.code] = event.state
             except Exception as e:
-                print(f"Error leyendo el mand{e}")
+                print(f"Error leyendo el mando:{e}")
 
         def obtener_estado(self):
             """Retorna el estado actual para que main.py lo lea."""

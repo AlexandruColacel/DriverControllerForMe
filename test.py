@@ -1,9 +1,9 @@
-from src.input_manager import GamepadManger
+from src.input_manager import GamepadManager
 import time
 
 def test_stick():
     try:
-        mando = GamepadManger()
+        mando = GamepadManager()
     except Exception as e:
         print("Conecta el mando, porfa.")
         return
