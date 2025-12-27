@@ -3,7 +3,7 @@ Aqui tendremos toda la logica para manejar las entradas de los dispositivos
 
 """
 from inputs import get_gamepad
-class GamepadManger:
+class GamepadManager:
         def __init__(self):
                 #creamos un diccionario llamado estdo actual donde guardo los primeros botonoes a detectar 
              self.estado_actual = {
@@ -37,8 +37,8 @@ class GamepadManger:
                         
                         else:
                             self.estado_actual[event.code] = event.state
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"Error leyendo el mand{e}")
 
         def obtener_estado(self):
             """Retorna el estado actual para que main.py lo lea."""
